@@ -6,7 +6,7 @@
 
 ## Description
 
-Check MK plugin for checking DFS backlog
+Check MK plugin for checking DFS backlog, originally created by Kai Biebel.
 
 ## Development
 

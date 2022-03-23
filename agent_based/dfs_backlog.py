@@ -15,7 +15,7 @@
 """
 DFS backlog check for Check_MK
 
-Authors:    Allan GooD - allan.cassaro@gmail.com
+Authors:    Kai Biebel
             Roger Ellenberger, roger.ellenberger@wagner.ch
 Version:    1.3
 

@@ -1,6 +1,6 @@
 {
     'author': u'Roger Ellenberger',
-    'description': u'DFS Backlog check originally created by Allan GooD - allan.cassaro@gmail.com',
+    'description': u'DFS Backlog check originally created by Kai Biebel',
     'download_url': '',
     'files': {
         'agent_based': [],
