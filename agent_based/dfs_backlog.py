@@ -62,7 +62,6 @@ class DfsBacklogHealthLevels(Enum):
         return State.OK
 
 
-
 class DfsReplication(NamedTuple):
     descr: str
     backlog_count: int
@@ -76,7 +75,7 @@ class DfsReplication(NamedTuple):
         direction: str = descr_raw[2]
         host: str = descr_raw[3]
 
-        dfs_replica_descr:str = f'{share_name} {direction} {host}'
+        dfs_replica_descr: str = f'{share_name} {direction} {host}'
         backlog_count: int = 0
         disabled: bool = False
 
