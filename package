@@ -1,0 +1,21 @@
+{
+    'author': u'Roger Ellenberger',
+    'description': u'DFS Backlog check originally created by Allan GooD - allan.cassaro@gmail.com',
+    'download_url': '',
+    'files': {
+        'agent_based': [],
+        'agents': ['dfs_backlog.ps1'],
+        'checkman': [],
+        'checks': ['dfs_backlog'],
+        'doc': [],
+        'inventory': [],
+        'notifications': [],
+        'pnp-templates': [],
+        'web': []
+    },
+    'name': 'def_backlog',
+    'title': u'DEF backlog check',
+    'version': '1.3',
+    'version.min_required': '2.0.0',
+    'version.packaged': '2.0.0'
+}

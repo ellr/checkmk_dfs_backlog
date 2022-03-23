@@ -1,0 +1,35 @@
+dfs_backlog_default_values = (300,1000)
+
+# the inventory function
+def inventory_dfs_backlog(info):
+   inventory = []
+   for line in info:
+      inventory.append( (line[0], "dfs_backlog_default_values") )
+
+   return inventory
+
+# the check function
+def check_dfs_backlog(item, params, info):
+   warn, crit = params
+   for line in info:
+     if line[0] == item:
+      if line[1] == "NULL":
+        return (0,"OK - DFSR Disabled,")
+      else:
+       backlog = int(line[1])
+       perfdata = [ ( "count", backlog, warn, crit ) ]
+       if backlog > crit:
+         return(2,"CRIT - Backlog count: "+line[1],perfdata)
+       elif backlog > warn:
+         return(1,"WARN - Backlog count: "+line[1],perfdata)
+       else:
+         return (0,"OK - Backlog count: "+line[1],perfdata)
+   return (3, "UNKNOWN - agent output error")
+
+# declare the check to Check_MK
+check_info['dfs_backlog'] = {
+    "check_function"          : check_dfs_backlog,
+    "inventory_function"      : inventory_dfs_backlog,
+    "service_description"     : "DFS Backlog:",
+    "has_perfdata"            : True,
+}
