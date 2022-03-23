@@ -70,7 +70,7 @@ class DfsReplication(NamedTuple):
 
     @staticmethod
     def from_string_table(line: List[str]) -> DfsReplication:
-        descr_raw: List[str] = line[0].split(' ')
+        descr_raw: List[str] = line[0].rstrip(')').split(' ')
 
         share_name: str = descr_raw[0]
         direction: str = descr_raw[2]
@@ -127,9 +127,10 @@ def check_dfs_backlog(item: str, section: List[DfsReplication]) -> CheckResult:
             if replication.disabled:
                 yield Result(state=State.OK, summary='DFSR Disabled')
             else:
-                yield Result(state=DfsBacklogHealthLevels().get_state(replication.backlog_count),
+                yield Result(state=DfsBacklogHealthLevels.get_state(replication.backlog_count),
                              summary=f'Backlog count: {replication.backlog_count}')
-                yield Metric("count", replication.backlog_count,
+                yield Metric(name="count",
+                             value=replication.backlog_count,
                              levels=DfsBacklogHealthLevels.health_levels())
             break
 

@@ -6,7 +6,7 @@
 
 ## Description
 
-Check MK agent for checking DFS backlog
+Check MK plugin for checking DFS backlog
 
 ## Development
 
