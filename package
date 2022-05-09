@@ -1,12 +1,12 @@
 {
     'author': u'Roger Ellenberger',
-    'description': u'DFS Backlog check originally created by Kai Biebel',
-    'download_url': '',
+    'description': u'DFS backlog check for Windows AD environment originally created by Kai Biebel',
+    'download_url': 'https://github.com/ellr/checkmk_dfs_backlog',
     'files': {
-        'agent_based': [],
-        'agents': ['dfs_backlog.ps1'],
+        'agent_based': ['dfs_backlog.py'],
+        'agents': ['plugins/dfs_backlog.ps1'],
         'checkman': [],
-        'checks': ['dfs_backlog'],
+        'checks': [],
         'doc': [],
         'inventory': [],
         'notifications': [],
@@ -14,8 +14,8 @@
         'web': []
     },
     'name': 'dfs_backlog',
-    'title': u'DFS backlog check',
-    'version': '1.3',
+    'title': u'DFSR backlog check',
+    'version': '2.0',
     'version.min_required': '2.0.0',
-    'version.packaged': '2.0.0'
+    'version.packaged': '2.0.0p21'
 }
