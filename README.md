@@ -1,4 +1,4 @@
-# Checkmk extension for Cisco ACI
+# Checkmk Extension For DFSR Backlog Check
 
 ![build](https://github.com/ellr/checkmk_dfs_backlog/workflows/build/badge.svg)
 ![flake8](https://github.com/ellr/checkmk_dfs_backlog/workflows/Lint/badge.svg)
@@ -6,11 +6,20 @@
 
 ## Description
 
-Check MK plugin for checking DFS backlog, originally created by Kai Biebel.
+DFS backlog check for Windows AD environment originally created by Kai Biebel.
 
-## Development
+
+# Development
+
+Feel free to contribute and extend this extension.
+
+For the plugin development [jiuka](https://github.com/jiuka)'s brilliant [checkmk_template](https://github.com/jiuka/checkmk_template) was used.
+
+
+## Setup
 
 For the best development experience use [VSCode](https://code.visualstudio.com/) with the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension. This maps your workspace into a checkmk docker container giving you access to the python environment and libraries the installed extension has.
+
 
 ## Directories
 
